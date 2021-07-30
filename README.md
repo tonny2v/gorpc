@@ -1,5 +1,16 @@
-# It works at linux
+# It works at Ubuntu
+## to make go app work correctly, use go mod
+```
+# init current go module
+go mod init
 
+# install missing go modules
+go mod tidy
+
+# make sure GOPATH is correct as $GOPATH/src/go.mod
+export GOPATH=$GOPATH:$PWD
+```
+## to compile cpp correctly:
 ```
 apt install protobuf-compiler protobuf-compiler-grpc libgrpc++ libprotobuf-dev
 
